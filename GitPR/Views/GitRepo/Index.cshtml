@@ -1,0 +1,28 @@
+﻿@model List<GitPR.Models.GitRepoClass>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>GitRepo</h2>
+
+<div>
+   <hr />
+
+
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model[0].login)
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.login
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
